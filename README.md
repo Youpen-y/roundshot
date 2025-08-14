@@ -28,10 +28,9 @@ Roundshot(rounded corners with custom radius):
 
 🔧 Dependencies
 ===
-- [flameshot](https://github.com/flameshot-org/flameshot) (required 
-  v0.7.3)
-- [ImageMagick](https://github.com/ImageMagick/ImageMagick) (required 
-6.3.5+ )
+- [flameshot](https://github.com/flameshot-org/flameshot) (required >= v0.7.3)
+- [ImageMagick](https://github.com/ImageMagick/ImageMagick) (required >=
+6.3.5+)
 
 Dependencies Installation:
 - *Ubuntu*

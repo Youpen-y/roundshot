@@ -55,13 +55,42 @@ if [ ! -s "$screenshot_file" ]; then
 fi
 
 echo "✨ Creating rounded corners..."
-convert "$screenshot_file" \
-  \( +clone -alpha extract \
-     -draw "fill black polygon 0,0 0,$radius $radius,0 fill white circle $radius,$radius $radius,0" \
-     \( +clone -flip \) -compose Multiply -composite \
-     \( +clone -flop \) -compose Multiply -composite \
-  \) -alpha off -compose CopyOpacity -composite \
-  "$output_file"
+
+if command -v magick >/dev/null 2>&1; then
+	version_info=$(magick --version 2>/dev/null | head -n 1)
+	case "$version_info" in
+		*"ImageMagick 7"*)
+			magick "$screenshot_file" \
+			  \( +clone -alpha extract \
+				 -draw "fill black polygon 0,0 0,$radius $radius,0 fill white circle $radius,$radius $radius,0" \
+				 \( +clone -flip \) -compose Multiply -composite \
+				 \( +clone -flop \) -compose Multiply -composite \
+			  \) -alpha off -compose CopyOpacity -composite \
+			  "$output_file"
+			;;
+		*)
+			echo "❌ Unknow ImageMagick version"
+			;;
+	esac
+elif command -v convert >/dev/null 2>&1; then
+	version_info=$(magick --version 2>/dev/null | head -n 1)
+	case "$version_info" in
+		*"ImageMagick "*)
+			convert "$screenshot_file" \
+			  \( +clone -alpha extract \
+				 -draw "fill black polygon 0,0 0,$radius $radius,0 fill white circle $radius,$radius $radius,0" \
+				 \( +clone -flip \) -compose Multiply -composite \
+				 \( +clone -flop \) -compose Multiply -composite \
+			  \) -alpha off -compose CopyOpacity -composite \
+			  "$output_file"
+			;;
+		*)
+			echo "❌ Unknow ImageMagick version"
+			;;
+	esac
+else
+	echo "❌ ImageMagick not installed"
+fi
 
 if [ -s "$output_file" ]; then
   echo "✅ Rounded screenshot saved to: $output_file"

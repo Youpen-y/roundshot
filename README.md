@@ -1,8 +1,11 @@
 📸 Roundshot - take rounder shots
 ===
-roundshot is a lightweight Bash script tool that lets you take screenshots
-with customizable rounded corners.
+![GitHub Repo stars](https://img.shields.io/github/stars/Youpen-y/roundshot)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Youpen-y/roundshot/total)
+![GitHub License](https://img.shields.io/github/license/Youpen-y/roundshot)
 
+`roundshot` is a lightweight Bash script tool that lets you take screenshots
+with customizable rounded corners.
 ### Preview
 ![animatedGif](./images/animatedUsage.gif)
 

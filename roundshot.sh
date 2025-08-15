@@ -73,7 +73,7 @@ if command -v magick >/dev/null 2>&1; then
 			;;
 	esac
 elif command -v convert >/dev/null 2>&1; then
-	version_info=$(magick --version 2>/dev/null | head -n 1)
+	version_info=$(convert --version 2>/dev/null | head -n 1)
 	case "$version_info" in
 		*"ImageMagick "*)
 			convert "$screenshot_file" \

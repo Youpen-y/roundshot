@@ -16,7 +16,7 @@ SYMLINK := $(BINDIR)/$(TARGET)
 
 all: install
 
-install: roundshot
+install:
 	@echo "Installing roundshot symlink to $(SYMLINK)..."
 	@if [ ! -f "$(SRCPATH)" ]; then \
 		echo "\033[31mError\033[0m: script '$(SRCPATH)' not found."; \

@@ -10,6 +10,15 @@ with customizable rounded corners.
 ![animatedGif](./images/animatedUsage.gif)
 
 
+### 🚀 Usage
+```bash
+roundshot [OPTION] [RADIUS]
+```
+
+Run the command and select an area with Flameshot. The screenshot will be:
+- Saved to `~/Pictures/Screenshots/`
+- Copied to clipboard (ready to paste)
+
 ### Examples
 Normal screenshot (square corners):
 
@@ -17,31 +26,35 @@ Normal screenshot (square corners):
 
 Roundshot(rounded corners with custom radius):
 - Default radiuss (10px)
-
+```bash
+$ roundshot              # Default 10px radius
+```
 ![default](./images/screenshot_corners_default.png)
 - 100px radius
-
+```bash
+$ roundshot 100           # Custom 100px radius
+```
 ![radius100](./images/screenshot_corners_100.png)
 
 
 ✨ Features
 ===
 - Customizable corner radius (in pixels)
-- Bind to keyboard shortcut (not implemented)
+- Auto-copy to clipboard
 
 🔧 Dependencies
 ===
 - [flameshot](https://github.com/flameshot-org/flameshot) (required >= v0.7.3)
-- [ImageMagick](https://github.com/ImageMagick/ImageMagick) (required >=
-6.3.5+)
+- [ImageMagick](https://github.com/ImageMagick/ImageMagick) (required >= 6.3.5+)
+- xclip (X11) or wl-clipboard (Wayland) - for clipboard copy
 
 Dependencies Installation:
 - *Ubuntu*
 ```Bash
-sudo apt install flameshot
-sudo apt install imagemagick
+sudo apt install flameshot imagemagick xclip
+# or for Wayland:
+sudo apt install flameshot imagemagick wl-clipboard
 ```
-
 
 📦 Installation
 ===
@@ -50,13 +63,6 @@ sudo apt install imagemagick
 sudo make # or sudo make install
 ```
 This will create a symbolic link to the script at /usr/bin/roundshot.
-
-🚀 Usage
-===
-```Bash
-roundshot [OPTION] [RADIUS]
-
-```
 
 ❤️ Support and Sponsorship
 ===

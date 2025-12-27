@@ -6,6 +6,9 @@
 
 `roundshot` is a lightweight Bash script tool that lets you take screenshots
 with customizable rounded corners.
+
+**[English](README.md) | [中文](README.zh-CN.md)**
+
 ### Preview
 ![animatedGif](./images/animatedUsage.gif)
 
@@ -84,9 +87,9 @@ sudo apt install flameshot imagemagick wl-clipboard
 # make help
 sudo make # or sudo make install
 ```
-This will create a symbolic link to the script at /usr/bin/roundshot.
+This will create a symbolic link to the script at `/usr/bin/roundshot`.
 
-❤️ Support and Sponsorship
+❤️ Support
 ===
 If you find this helpful, please star it!
 

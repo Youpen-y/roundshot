@@ -9,8 +9,7 @@
 **[English](README.md) | [中文](README.zh-CN.md)**
 
 ### 预览
-![animatedGif](./images/animatedUsage.gif)
-
+<video src="https://private-user-images.githubusercontent.com/44435912/531943179-6e7e1c5a-2ce4-4ad9-b920-04e2e40d984a.webm?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njc2MTgyOTEsIm5iZiI6MTc2NzYxNzk5MSwicGF0aCI6Ii80NDQzNTkxMi81MzE5NDMxNzktNmU3ZTFjNWEtMmNlNC00YWQ5LWI5MjAtMDRlMmU0MGQ5ODRhLndlYm0_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMTA1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDEwNVQxMjU5NTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lYjM2YjRhY2Q1YmQ0YjBjMzgyY2E4MzljYjEyMWEzNDk2NGQ2YTRlMTE3MWE1NjgxYTNmNDk5MmMxMGMyODAwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.pwt-FLZ586OK25bukbjO7H-vv3EI9XqwfFzxI2z4pdc" autoplay muted loop></video>
 
 ### 🚀 使用方法
 ```bash
@@ -78,20 +77,22 @@ sudo apt install flameshot imagemagick wl-clipboard
 ### 示例
 普通截图（直角）：
 
-![normal](./images/screenshot_corners_0.png)
+<img src="https://private-user-images.githubusercontent.com/44435912/531945808-539698b8-191a-4924-ba28-a48b66bcbc98.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njc2MTgzMzYsIm5iZiI6MTc2NzYxODAzNiwicGF0aCI6Ii80NDQzNTkxMi81MzE5NDU4MDgtNTM5Njk4YjgtMTkxYS00OTI0LWJhMjgtYTQ4YjY2YmNiYzk4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAxMDUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMTA1VDEzMDAzNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQwZWVjZmQ3NmRmOTE4MDM2ZDQ5YzZlNjU4MDIyZjY4Yjg5MTE1NTQzMmY1MjVmMTFiYmRmYzlkZWM2MWU1ZTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.zUoo4y7AceL1XdC9lbuJhzKzZdXvllXjvjdiwOdjCrs" alt="normal" width="400">
 
 Roundshot（自定义圆角半径）：
 - 默认半径（10px）
 ```bash
 $ roundshot              # 默认 10px 半径
 ```
-![default](./images/screenshot_corners_default.png)
+
+<img src="https://private-user-images.githubusercontent.com/44435912/531946367-61596682-c85e-41ad-9974-be57a6fdcdb2.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njc2MTgzMzYsIm5iZiI6MTc2NzYxODAzNiwicGF0aCI6Ii80NDQzNTkxMi81MzE5NDYzNjctNjE1OTY2ODItYzg1ZS00MWFkLTk5NzQtYmU1N2E2ZmRjZGIyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAxMDUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMTA1VDEzMDAzNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRkNTE0NGE4Y2M2NDM1Yjc1OWEzMDE0Y2QzZjNhZWI1NTc0YmNkODdkZjQyNGFjYmI4MTZkOGE4ODY2YmQ0ZDgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.8Eb3tAzRTs_jupaJ_eLCXbdCBd_rvBLqteCMBYgtRyk" alt="default" width="400">
+
 - 100px 半径
 ```bash
 $ roundshot 100           # 自定义 100px 半径
 ```
-![radius100](./images/screenshot_corners_100.png)
 
+<img src="https://private-user-images.githubusercontent.com/44435912/531946574-a505b790-37c9-4d85-bfce-88571dda9b1e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njc2MTgzMzYsIm5iZiI6MTc2NzYxODAzNiwicGF0aCI6Ii80NDQzNTkxMi81MzE5NDY1NzQtYTUwNWI3OTAtMzdjOS00ZDg1LWJmY2UtODg1NzFkZGE5YjFlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAxMDUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMTA1VDEzMDAzNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPThiNjkxMzZkNTZhYTRiY2JmNTdjOWYyYjEyM2E4ZDMxNzJiYWMwZTU0NGY0Y2ExMDlmOGE4Y2JkZDU1YmVlYzcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Yji-BqPpXlmNG0WPerhFtCUbgk3eHmPwjYByhinaWik" alt="radius100" width="400">
 
 ❤️ 支持
 ===

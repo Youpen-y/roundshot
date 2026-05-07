@@ -43,13 +43,14 @@ This will create a symbolic link to the script at `/usr/bin/roundshot`.
 - [flameshot](https://github.com/flameshot-org/flameshot) (required >= v0.7.3)
 - [ImageMagick](https://github.com/ImageMagick/ImageMagick) (required >= 6.3.5+)
 - xclip (X11) or wl-clipboard (Wayland) - for clipboard copy
+- notify-send - for desktop notifications
 
 Dependencies Installation:
 ```Bash
 # Ubuntu
-sudo apt install flameshot imagemagick xclip
+sudo apt install flameshot imagemagick xclip libnotify-bin
 # or Wayland:
-sudo apt install flameshot imagemagick wl-clipboard
+sudo apt install flameshot imagemagick wl-clipboard libnotify-bin
 ```
 
 Keyboard Shortcut (**Recommended**)

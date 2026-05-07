@@ -42,13 +42,14 @@ sudo make # 或 sudo make install
 - [flameshot](https://github.com/flameshot-org/flameshot)（必需 >= v0.7.3）
 - [ImageMagick](https://github.com/ImageMagick/ImageMagick)（必需 >= 6.3.5+）
 - xclip（X11）或 wl-clipboard（Wayland）- 用于剪贴板复制
+- notify-send - 用于桌面通知
 
 #### 依赖安装：
 ```Bash
 # Ubuntu
-sudo apt install flameshot imagemagick xclip
+sudo apt install flameshot imagemagick xclip libnotify-bin
 # 或 Wayland：
-sudo apt install flameshot imagemagick wl-clipboard
+sudo apt install flameshot imagemagick wl-clipboard libnotify-bin
 ```
 
 #### 键盘快捷键（**推荐**）

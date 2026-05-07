@@ -10,6 +10,11 @@
 # License       : MIT License
 ################################################################################
 
+notify() {
+  local urgency="$1" body="$2"
+  notify-send -a Roundshot -i camera-photo -u "$urgency" "Roundshot" "$body" 2>/dev/null
+}
+
 usage() {
 cat <<-EOF
 	roundshot - Tool for create rounded-corner screenshots
@@ -51,7 +56,7 @@ mkdir -p "$output_dir"
 
 # screenshot
 echo "  Please select area with Flameshot..."
-flameshot gui -r > "$screenshot_file"
+flameshot gui -r > "$screenshot_file" 2>/dev/null
 
 if [ ! -s "$screenshot_file" ]; then
   echo "❌ Screenshot failed or was canceled."
@@ -74,6 +79,7 @@ fi
 
 if [ -z "$magick_cmd" ]; then
 	echo "❌ ImageMagick not installed. Please install ImageMagick (>= 6.3.5+)"
+	notify critical "ImageMagick not found"
 	exit 1
 fi
 
@@ -91,6 +97,7 @@ case "$version_info" in
 	*)
 		echo "❌ Unknown ImageMagick version: $version_info"
 		echo "   Supported: ImageMagick 6.x or 7.x"
+		notify critical "Unsupported ImageMagick version"
 		exit 1
 		;;
 esac
@@ -115,14 +122,20 @@ if [ -s "$output_file" ]; then
 
   if [ "$copied" = true ]; then
     echo "📋 Copied to clipboard"
+    notify normal "Screenshot saved and copied to clipboard
+$output_file"
   else
     echo "⚠️  Failed to copy to clipboard"
     echo "   Install: sudo apt install xclip (X11) or wl-clipboard"
     echo "           - (Wayland)"
+    notify normal "Screenshot saved (clipboard copy failed)
+$output_file"
   fi
 
   rm -f "$screenshot_file"
 else
   echo "❌ Failed to create rounded screenshot. Check ImageMagick installation."
   echo "📄 Original screenshot: $screenshot_file"
+  notify critical "Failed to create rounded screenshot
+Original: $screenshot_file"
 fi
